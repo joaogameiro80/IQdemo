@@ -1,0 +1,879 @@
+/* Neue Haas Grotesk Font Declarations */
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("fonts/Neue Haas Grotesk/NHaasGroteskDSPro-15UltTh.otf")
+    format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("fonts/Neue Haas Grotesk/NHaasGroteskDSPro-25Th.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("fonts/Neue Haas Grotesk/NHaasGroteskDSPro-55Rg.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("fonts/Neue Haas Grotesk/NHaasGroteskTXPro-55Rg.otf")
+      format("opentype"),
+    url("fonts/Neue Haas Grotesk/NHaasGroteskTXPro-55Rg.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("fonts/Neue Haas Grotesk/NHaasGroteskTXPro-65Md.otf")
+      format("opentype"),
+    url("fonts/Neue Haas Grotesk/NHaasGroteskTXPro-65Md.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("fonts/Neue Haas Grotesk/NHaasGroteskTXPro-75Bd.otf")
+      format("opentype"),
+    url("fonts/Neue Haas Grotesk/NHaasGroteskTXPro-75Bd.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* HitachiSans Font Declarations */
+@font-face {
+  font-family: "HitachiSans";
+  src: url("fonts/Typeface (HitachiSans)/WEB/HitachiSans-Regular.woff2")
+      format("woff2"),
+    url("fonts/Typeface (HitachiSans)/WEB/HitachiSans-Regular.woff")
+      format("woff"),
+    url("fonts/Typeface (HitachiSans)/TTF/HitachiSans-Regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HitachiSans";
+  src: url("fonts/Typeface (HitachiSans)/WEB/HitachiSans-Bold.woff2")
+      format("woff2"),
+    url("fonts/Typeface (HitachiSans)/WEB/HitachiSans-Bold.woff") format("woff"),
+    url("fonts/Typeface (HitachiSans)/TTF/HitachiSans-Bold.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HitachiSans";
+  src: url("fonts/Typeface (HitachiSans)/WEB/HitachiSans-Italic.woff2")
+      format("woff2"),
+    url("fonts/Typeface (HitachiSans)/WEB/HitachiSans-Italic.woff")
+      format("woff"),
+    url("fonts/Typeface (HitachiSans)/TTF/HitachiSans-Italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HitachiSans";
+  src: url("fonts/Typeface (HitachiSans)/WEB/HitachiSans-BoldItalic.woff2")
+      format("woff2"),
+    url("fonts/Typeface (HitachiSans)/WEB/HitachiSans-BoldItalic.woff")
+      format("woff"),
+    url("fonts/Typeface (HitachiSans)/TTF/HitachiSans-BoldItalic.ttf")
+      format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+body {
+  margin: 0;
+  background-color: #000;
+  color: #eee;
+  font-family: "Neue Haas Grotesk", "HitachiSans", sans-serif;
+  transition: background-color 0.5s ease;
+  font-size: 12px;
+}
+
+/* Add animation for background when thumbnails are clicked */
+@keyframes backgroundPulse {
+  0% {
+    background-color: #444;
+  }
+  50% {
+    background-color: #222;
+  }
+  100% {
+    background-color: #000;
+  }
+}
+
+body.thumbnail-clicked {
+  animation: backgroundPulse 1s ease forwards !important;
+  background-color: #444 !important;
+}
+
+a {
+  text-decoration: none;
+}
+header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Changed to space between for logo positioning */
+  position: relative;
+  z-index: 100;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+header .logo img {
+  height: 55px;
+  max-width: 150px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Removed secondary-logo styles */
+
+header a {
+  color: #eee;
+  margin-right: 40px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto; /* allow horizontal scroll */
+  overflow-y: hidden; /* disable vertical scroll unless needed later */
+}
+
+/* carousel */
+.carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: fit-content; /* or 100% if no overflow is needed */
+  min-width: 100vw; /* prevent cutoff */
+  height: 100vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.carousel-body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+}
+
+.list {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.carousel-body,
+.list {
+  height: 100%;
+}
+
+.carousel .list .item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1199px) {
+  .carousel .list .item {
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+.carousel .list,
+.carousel .list .item {
+  height: auto;
+  min-height: 100vh; /* optional fallback */
+}
+
+@media (max-width: 1000px) {
+  .carousel {
+    overflow-y: auto;
+  }
+}
+
+.carousel .list .item {
+  display: none; /* Hide all slides by default */
+}
+
+.carousel .list .item.active {
+  display: flex; /* Only the active slide is visible */
+}
+
+.carousel .list .item .content {
+  flex: 1;
+  max-width: 50%;
+  padding: 40px;
+  box-sizing: border-box;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.carousel .list .item .right-section {
+  flex: 1;
+  max-width: 55%;
+  box-sizing: border-box;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+/* Only apply to background images in .item */
+.carousel
+  .list
+  .item
+  > img:not(#entry-image):not(#midrange-image):not(#highend-image):not(
+    #family-image
+  ):not(#hammerspace-image):not(#hcsf-image):not(.title-logo) {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform;
+  top: 0;
+  left: 0;
+}
+
+.right-content-wrapper {
+  display: flex;
+  flex-direction: row; /* side-by-side */
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+.right-section {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start; /* align everything to left instead of center */
+  justify-content: center;
+  max-width: 50%;
+  padding: 120px 40px 60px 40px;
+  gap: 30px; /* space between image and specs */
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.right-section img {
+  width: 220px;
+  /*  max-height: 400px; */
+  height: auto;
+  object-fit: contain;
+  display: block;
+  /*  margin: 0 auto; */
+  max-width: 40vw;
+  max-height: 40vh;
+  object-fit: contain;
+}
+
+.right-section img + .specs-container {
+  margin-top: 20px;
+}
+
+/* Show the active one */
+.right-section.active {
+  display: flex;
+  pointer-events: auto;
+}
+
+.list .item {
+  position: relative;
+  z-index: 2;
+}
+
+.specs-container {
+  width: 100%;
+  min-width: 250px;
+  max-width: 450px;
+  background-color: transparent;
+  color: #fff;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.specs-container.disabled {
+  display: none;
+}
+
+#family-image {
+  width: auto;
+  height: auto;
+  max-height: 400px;
+}
+
+.specs-container h3 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 5px;
+}
+
+.spec-label {
+  font-weight: 600;
+  font-size: 1em;
+  color: #cc0000;
+  min-width: 140px;
+  text-align: left;
+}
+
+.spec-values-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.spec-value {
+  text-align: right;
+  flex: 1;
+  font-weight: 500;
+  font-size: 1em;
+  color: #fff;
+}
+.carousel .list .item .author {
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.title-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  margin-left: 10px; /* Add some space between title and logo */
+  vertical-align: middle; /* Align with the text */
+  will-change: opacity, transform; /* Optimize for animation */
+  backface-visibility: hidden; /* Improve performance */
+}
+
+.carousel .list .item .title,
+.carousel .list .item .topic {
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1.3em;
+  white-space: nowrap;
+  /* white-space: normal; */
+  max-width: 100%;
+}
+.carousel .list .item .topic {
+  /* color: #f1683a; */
+  color: #cc0000;
+  white-space: nowrap;
+  font-size: 4.5em; /* Slightly smaller to fit better */
+}
+
+.carousel .list .item .des {
+  font-size: 1.2em; /* Make description text slightly bigger */
+  line-height: 1.5;
+}
+.carousel .list .item .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: 40px;
+  gap: 5px;
+  margin-top: 20px;
+}
+.carousel .list .item .buttons button {
+  border: none;
+  background-color: #eee;
+  letter-spacing: 3px;
+  font-family: "HitachiSans", sans-serif;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.carousel .list .item .buttons button:hover {
+  /* background-color: #f1683a; */
+  background-color: #cc0000;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.carousel .list .item .buttons button:nth-child(2) {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #eee;
+}
+
+.carousel .list .item .buttons button:nth-child(2):hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* thumbail */
+.thumbnail {
+  display: none;
+}
+.thumbnail .item {
+  width: 130px;
+  height: 170px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.thumbnail .item.clickable {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail .item.clickable:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.thumbnail .item .content {
+  color: #fff;
+  position: absolute;
+  top: 50%; /* Position in the middle vertically */
+  left: 10px;
+  right: 10px;
+  text-align: center; /* Center the text horizontally */
+  transform: translateY(-50%); /* Center perfectly in the middle */
+}
+.thumbnail .item .content .title {
+  font-weight: 700; /* Increased from 600 to 700 for more boldness */
+  font-size: 1.5em; /* Increased font size from 1.2em to 1.5em */
+}
+.thumbnail .item .content .description {
+  font-weight: 300;
+}
+/* arrows */
+.arrows {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+.arrows button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eee4;
+  border: none;
+  color: #fff;
+  font-family: "HitachiSans", sans-serif;
+  font-weight: bold;
+  transition: 0.5s;
+  position: relative;
+}
+
+/* Pulsing effect for navigation buttons */
+.arrows button::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 50%;
+  border: 3px solid rgba(204, 0, 0, 0.6);
+  box-shadow: 0 0 8px rgba(204, 0, 0, 0.5);
+  animation: pulse 2s infinite;
+  opacity: 0.8;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+.arrows button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Pagination dots */
+.pagination-dots {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.pagination-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-dots .dot:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  transform: scale(1.1);
+}
+
+.pagination-dots .dot.active {
+  background-color: #cc0000;
+  transform: scale(1.2);
+}
+
+/* animation */
+.carousel .list .item:nth-child(1) {
+  z-index: 1;
+}
+
+/* Direct jump animation */
+.carousel.direct-jump .list .item:nth-child(1) .content .author,
+.carousel.direct-jump .list .item:nth-child(1) .content .title,
+.carousel.direct-jump .list .item:nth-child(1) .content .title-logo,
+.carousel.direct-jump .list .item:nth-child(1) .content .topic,
+.carousel.direct-jump .list .item:nth-child(1) .content .des,
+.carousel.direct-jump .list .item:nth-child(1) .content .buttons {
+  transform: translateY(0px);
+  filter: blur(0px);
+  opacity: 1;
+  animation: showContent 0.5s linear 1 forwards;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+/* Logo wrapper to control positioning */
+.logo-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  height: 60px;
+  width: auto;
+}
+
+/* Simple logo styling with fixed dimensions */
+.title-logo {
+  height: 60px;
+  width: auto;
+  max-height: 60px;
+  max-width: 100px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* Apply red color to the iQ logo */
+/* img[src="image/iQLogo.svg"] {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(84%) saturate(6418%) hue-rotate(0deg) brightness(97%) contrast(113%);
+} */
+
+/* Specific size for Hammerspace logo */
+.hammerspace-logo {
+  height: 50px !important;
+  max-height: 50px !important;
+  width: auto !important;
+  vertical-align: middle !important;
+  position: relative;
+  top: 2px; /* Adjust vertical position to align perfectly with title */
+  /* Removed left property to prevent movement after appearing */
+}
+
+/* Include logo wrapper in the same animation as the text */
+.carousel .list .item .content .logo-wrapper {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: none; /* Remove default animation */
+}
+
+/* Only animate the logo wrapper when it's the active slide */
+.carousel .list .item:first-child .content .logo-wrapper {
+  animation: showContent 0.5s 1s linear 1 forwards;
+}
+@keyframes showContent {
+  to {
+    transform: translateY(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+/* Animation delays for title and logo */
+.carousel .list .item:first-child .content .title,
+.carousel .list .item:first-child .content .logo-wrapper {
+  animation-delay: 1.2s !important;
+}
+.carousel .list .item:first-child .content .topic {
+  animation-delay: 1.4s !important;
+}
+.carousel .list .item:nth-child(1) .content .des {
+  animation-delay: 1.6s !important;
+}
+.carousel .list .item:nth-child(1) .content .buttons {
+  animation-delay: 1.8s !important;
+}
+/* Entry image animation */
+.carousel.next #entry-image {
+  opacity: 1;
+  transition: opacity 1s ease 0.5s;
+}
+
+@keyframes showImage {
+  to {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1) {
+  overflow: hidden;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+.carousel.prev .list .item img {
+  z-index: 100;
+}
+@keyframes showThumbnail {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+}
+.carousel.next .thumbnail {
+  animation: effectNext 0.5s linear 1 forwards;
+}
+
+@keyframes effectNext {
+  from {
+    transform: translateX(150px);
+  }
+}
+
+/* running time */
+
+.carousel .time {
+  position: absolute;
+  z-index: 1000;
+  width: 0%;
+  height: 3px;
+  /* background-color: #f1683a; */
+  background-color: #cc0000;
+  left: 0;
+  top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+  animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2) {
+  z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img:not(.entry-image) {
+  animation: outFrame 0.5s linear 1 forwards;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+@keyframes outFrame {
+  to {
+    width: 150px;
+    height: 220px;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 20px;
+  }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1) {
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail 0.5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button {
+  pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons {
+  animation: contentOut 1.5s linear 1 forwards !important;
+}
+
+@keyframes contentOut {
+  to {
+    transform: translateY(-150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 678px) {
+  .carousel .list .item .content {
+    padding-right: 0;
+  }
+  .carousel .list .item .content .title {
+    font-size: 30px;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.carousel-controls {
+  position: absolute;
+  flex-direction: column;
+  bottom: 150px; /* or whatever offset from bottom */
+  left: 70%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 100;
+  padding: 10px 20px;
+  max-width: fit-content;
+}
+
+/* ↓ Responsive adjustment for short screens */
+@media (max-height: 800px) {
+  .carousel-controls {
+    bottom: 0px;
+  }
+}
+
+.mobile-warning {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  font-size: 1.5em;
+  padding: 40px;
+  text-align: center;
+  z-index: 9999;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 834px) {
+  .mobile-warning {
+    display: flex;
+  }
+
+  .carousel,
+  .time,
+  header {
+    display: none !important;
+  }
+}
